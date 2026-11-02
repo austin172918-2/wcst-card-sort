@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#ffffff">
+<meta name="description" content="卡片分類實驗">
+<title>卡片分類實驗</title>
+<link rel="stylesheet" href="style.css">
+<script src="engine.js" defer></script>
+<script src="app.js" defer></script>
+</head>
+<body>
+<main>
+<section id="intro">
+<button id="start-button">開始實驗</button>
+</section>
+<section id="game" hidden aria-label="卡片分類實驗">
+<p id="game-heading" tabindex="-1">觀察下方的新卡片，再選一張固定卡片與它配對。</p>
+<p id="correct-counter" aria-live="polite" aria-atomic="true">答對題數：0 / 128</p>
+<div id="targets" class="targets"></div>
+<div id="response-card" class="response-card" role="img"></div>
+<div id="feedback" role="status" aria-live="polite" aria-atomic="true"></div>
+</section>
+<section id="results" hidden aria-labelledby="results-heading">
+<h1 id="results-heading" tabindex="-1">實驗結束</h1>
+<table class="metrics"><tbody>
+<tr><th>答對題數</th><td id="metric-correct"></td></tr>
+<tr><th>實際作答題數</th><td id="metric-trials"></td></tr>
+<tr><th>實際正確率</th><td id="metric-accuracy"></td></tr>
+<tr><th>完成分類數</th><td id="metric-categories"></td></tr>
+<tr><th>z 分數</th><td id="metric-z"></td></tr>
+<tr><th>研究樣本參考位置</th><td><span id="metric-percentile"></span><br><small>常態近似估計</small></td></tr>
+</tbody></table>
+</section>
+</main>
+<noscript>請啟用 JavaScript。</noscript>
+</body>
+</html>
